@@ -5,14 +5,16 @@ FastAPI app untuk PoC:
 - Insert data ke table
 - Read data dari table
 
-### Environment Variables
-Aplikasi ini membaca environment variables berikut (diatur di OpenShift DeploymentConfig atau BuildConfig):
+### Required Environment Variables (must be filled when deploying the app)
 
-- `DATABASE_USER`
-- `DATABASE_PASSWORD`
-- `DATABASE_NAME`
-- `DATABASE_HOST`
-- `DATABASE_PORT`
+| Name              | Example Value        | Description             |
+|-------------------|----------------------|-------------------------|
+| DATABASE_USER     | appuser              | Database username       |
+| DATABASE_PASSWORD | openshift123         | Database password       |
+| DATABASE_NAME     | appdb                | Database name           |
+| DATABASE_HOST     | demo-postgres-rw     | Database service name   |
+| DATABASE_PORT     | 5432                 | Database port           |
+
 
 ### Build di OpenShift
 ```bash
