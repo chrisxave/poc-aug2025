@@ -18,7 +18,7 @@ FastAPI app untuk PoC:
 
 ### Build di OpenShift
 ```bash
-oc new-app python:3.11~https://github.com/<user>/<repo>.git \
+oc new-app python:3.11~https://github.com/chrisxave/poc-aug2025.git \
   --name=demo-api \
   -e DATABASE_USER=appuser \
   -e DATABASE_PASSWORD=openshift123 \
