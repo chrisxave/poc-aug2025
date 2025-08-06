@@ -7,13 +7,13 @@ FastAPI app untuk PoC:
 
 ### Required Environment Variables (must be filled when deploying the app)
 
-| Name              | Example Value        | Description             |
-|-------------------|----------------------|-------------------------|
-| DATABASE_USER     | appuser              | Database username       |
-| DATABASE_PASSWORD | openshift123         | Database password       |
-| DATABASE_NAME     | appdb                | Database name           |
-| DATABASE_HOST     | demo-postgres-rw     | Database service name   |
-| DATABASE_PORT     | 5432                 | Database port           |
+| Name        | Example Value        | Description             |
+|-------------|----------------------|-------------------------|
+| DB_USER     | appuser              | Database username       |
+| DB_PASSWORD | openshift123         | Database password       |
+| DB_NAME     | appdb                | Database name           |
+| DB_HOST     | demo-postgres-rw     | Database service name   |
+| DB_PORT     | 5432                 | Database port           |
 
 
 ### Build di OpenShift
