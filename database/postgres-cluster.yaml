@@ -1,0 +1,18 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: demo-postgres
+  namespace: NAMESPACE-LO
+spec:
+  instances: 3
+  storage:
+    size: 5Gi
+    storageClass: ocs-external-storagecluster-ceph-rbd
+  bootstrap:
+    initdb:
+      database: appdb
+      owner: appuser
+      secret:
+        name: demo-postgres-secret
+  superuserSecret:
+    name: demo-postgres-superuser
