@@ -2,9 +2,10 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: demo-postgres
-  namespace: NAMESPACE-LO
+  namespace: chris-poc
 spec:
   instances: 3
+  imageName: ghcr.io/cloudnative-pg/postgresql:17.5
   storage:
     size: 5Gi
     storageClass: ocs-external-storagecluster-ceph-rbd
