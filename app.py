@@ -7,11 +7,11 @@ app = FastAPI()
 # Fungsi helper untuk koneksi ke PostgreSQL
 async def get_conn():
     return await asyncpg.connect(
-        user=os.getenv("DATABASE_USER"),
-        password=os.getenv("DATABASE_PASSWORD"),
-        database=os.getenv("DATABASE_NAME"),
-        host=os.getenv("DATABASE_HOST"),
-        port=int(os.getenv("DATABASE_PORT", 5432))
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME"),
+        host=os.getenv("DB_HOST"),
+        port=int(os.getenv("DB_PORT", 5432))
     )
 
 # Default schema class untuk dokumentasi (tidak digunakan sebagai model pydantic)
