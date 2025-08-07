@@ -1,20 +1,10 @@
 from fastapi import FastAPI, Body, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 import asyncpg
 import os
 
 app = FastAPI()
 
-# ✅ Tambahin ini
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Bisa diganti dengan frontend URL kalau mau lebih aman
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# DB Config
+# Ambil credential DB dari env, kalau kosong pakai default
 DB_USER = os.getenv("DATABASE_USER", "devuser")
 DB_PASSWORD = os.getenv("DATABASE_PASSWORD", "openshift123")
 DB_NAME = os.getenv("DATABASE_NAME", "pocdb")
@@ -84,3 +74,4 @@ if __name__ == "__main__":
     import uvicorn
     PORT = int(os.getenv("PORT", 8000))
     uvicorn.run("app:app", host="0.0.0.0", port=PORT)
+
