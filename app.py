@@ -15,11 +15,11 @@ app.add_middleware(
 )
 
 # DB Config
-DB_USER = os.getenv("DATABASE_USER", "devuser")
-DB_PASSWORD = os.getenv("DATABASE_PASSWORD", "openshift123")
-DB_NAME = os.getenv("DATABASE_NAME", "pocdb")
-DB_HOST = os.getenv("DATABASE_HOST", "postgresql")
-DB_PORT = int(os.getenv("DATABASE_PORT", 5432))
+DB_USER = os.getenv("DB_USER", "devuser")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "openshift123")
+DB_NAME = os.getenv("DB_NAME", "pocdb")
+DB_HOST = os.getenv("DB_HOST", "postgresql")
+DB_PORT = int(os.getenv("DB_PORT", 5432))
 
 
 async def get_conn():
