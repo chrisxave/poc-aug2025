@@ -20,9 +20,9 @@ FastAPI app untuk PoC:
 ```bash
 oc new-app python:3.11~https://github.com/chrisxave/poc-aug2025.git \
   --name=demo-api \
-  -e DATABASE_USER=appuser \
-  -e DATABASE_PASSWORD=openshift123 \
-  -e DATABASE_NAME=appdb \
-  -e DATABASE_HOST=demo-postgres-rw \
-  -e DATABASE_PORT=5432
+  -e DB_USER=appuser \
+  -e DB_PASSWORD=openshift123 \
+  -e DB_NAME=appdb \
+  -e DB_HOST=demo-postgres-rw \
+  -e DB_PORT=5432
 
